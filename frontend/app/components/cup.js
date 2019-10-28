@@ -17,4 +17,10 @@
 
 class Cup extends GameObject {
   ball = null
+
+  showBall() {
+    if (this.ball) {
+      this.ball.show()
+    }
+  }
 }

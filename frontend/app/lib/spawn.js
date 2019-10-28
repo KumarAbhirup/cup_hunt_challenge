@@ -27,6 +27,8 @@
   Cup
   random
   imgCup
+  GameObject
+  imgLife
 */
 
 // To draw the timer in the right place
@@ -78,12 +80,12 @@ function drawTimer() {
 }
 
 function spawnCups() {
-  for (let i = 0; i < noOfCups; i++) {
+  for (let i = 1; i <= noOfCups; i++) {
     cups.push(
       new Cup(
         {
-          x: random(0, width),
-          y: random(0, height),
+          x: random(objSize * 4, width - objSize * 4),
+          y: random(objSize * 4, height - objSize * 4),
         },
         { radius: 50 },
         {
@@ -93,4 +95,17 @@ function spawnCups() {
       )
     )
   }
+
+  const randomlyChosenCup = random(cups)
+  randomlyChosenCup.ball = new GameObject(
+    {
+      x: randomlyChosenCup.body.position.x,
+      y: randomlyChosenCup.body.position.y + objSize * 1.5,
+    },
+    { radius: 20 },
+    {
+      shape: 'circle',
+      image: imgLife,
+    }
+  )
 }
