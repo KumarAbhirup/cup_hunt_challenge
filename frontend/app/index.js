@@ -25,6 +25,9 @@ let particles = []
 let player
 let enemies = []
 
+let ball
+let cups = []
+
 // Game Stuffs (READ-N-WRITE)
 let emojis = []
 let emojiCooldown = 0
@@ -51,8 +54,11 @@ let score = 0
 
 // Data taken from Game Settings
 let comboTexts = []
+let noOfCups = 3
 
 // Images
+let imgCup
+
 let imgLife
 let imgBackground
 
@@ -127,6 +133,7 @@ function preload() {
   }
 
   // Load images
+  imgCup = loadImage(Koji.config.images.cupImage)
   imgLife = loadImage(Koji.config.images.lifeIcon)
   soundImage = loadImage(Koji.config.images.soundImage)
   muteImage = loadImage(Koji.config.images.muteImage)
@@ -150,6 +157,7 @@ function preload() {
   startingLives = parseInt(Koji.config.strings.lives)
   comboTexts = Koji.config.strings.comboText.split(',')
   startingGameTimer = parseInt(Koji.config.strings.gameTimer)
+  noOfCups = Koji.config.strings.numberOfCups
   lives = startingLives
 
   // Timer stuff
@@ -178,6 +186,8 @@ function instantiate() {
     }
   )
   player.id = dispatch.clientId
+
+  spawnCups()
 
   // Instantiate Emojis
   for (let i = 0; i < Koji.config.strings.emojis.length; i++) {
@@ -587,10 +597,6 @@ function init() {
 
   // Keep everyone at their original place
   instantiate()
-
-  camera.position.x = player.body.position.x
-  camera.position.y = player.body.position.y
-  cameraTarget = player
 
   /**
    * In multiplayer games as of now,

@@ -1,5 +1,6 @@
 {
   "images": {
+    "cupImage": "https://i.ibb.co/hyx9hHP/starbucks.png",
     "soundImage": "https://i.imgur.com/rtFppa8.png",
     "muteImage": "https://i.imgur.com/AR7C733.png",
     "lifeIcon": "https://i.imgur.com/39e9e4h.png",
@@ -19,41 +20,50 @@
     "enemy5": "https://i.imgur.com/IaI0zLb.png",
     "enemy6": "https://i.imgur.com/tFhnq93.png"
   },
-  "@@editor": [{
-    "key": "images",
-    "name": "Images",
-    "icon": "💪🏻",
-    "source": "images.json",
-    "fields": [{
-        "key": "soundImage",
-        "name": "Sound Icon",
-        "description": "Ideal size: 32x32",
-        "type": "image"
-      },
-      {
-        "key": "muteImage",
-        "name": "Mute Icon",
-        "description": "Ideal size: 32x32",
-        "type": "image"
-      },
-      {
-        "key": "lifeIcon",
-        "name": "Life Icon",
-        "description": "Ideal size: 96x96",
-        "type": "image"
-      },
-      {
-        "key": "background",
-        "name": "Background",
-        "description": "Leave empty if you want to use a solid color. Ideal size: any, but keep in mind it could deform based on screen size",
-        "type": "image"
-      },
-      {
-        "key": "backgroundInGame",
-        "name": "Background for Gaming Screen",
-        "description": "Leave empty if you want to use a solid color. Ideal size: any, but keep in mind it could deform based on screen size",
-        "type": "image"
-      }
-    ]
-  }]
+  "@@editor": [
+    {
+      "key": "images",
+      "name": "Images",
+      "icon": "💪🏻",
+      "source": "images.json",
+      "fields": [
+        {
+          "key": "cupImage",
+          "name": "Cup Image",
+          "description": "Ideal size: 100x100",
+          "type": "image"
+        },
+        {
+          "key": "soundImage",
+          "name": "Sound Icon",
+          "description": "Ideal size: 32x32",
+          "type": "image"
+        },
+        {
+          "key": "muteImage",
+          "name": "Mute Icon",
+          "description": "Ideal size: 32x32",
+          "type": "image"
+        },
+        {
+          "key": "lifeIcon",
+          "name": "Life Icon",
+          "description": "Ideal size: 96x96",
+          "type": "image"
+        },
+        {
+          "key": "background",
+          "name": "Background",
+          "description": "Leave empty if you want to use a solid color. Ideal size: any, but keep in mind it could deform based on screen size",
+          "type": "image"
+        },
+        {
+          "key": "backgroundInGame",
+          "name": "Background for Gaming Screen",
+          "description": "Leave empty if you want to use a solid color. Ideal size: any, but keep in mind it could deform based on screen size",
+          "type": "image"
+        }
+      ]
+    }
+  ]
 }

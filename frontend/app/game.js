@@ -30,30 +30,10 @@ function gamePlay() {
   // InGame UI
   removeEmptyEnemies()
 
-  camera.on()
-
-  player.show()
-  player.showPlayerName()
-
-  enemies.forEach(enemy => {
-    enemy.show()
-    enemy.showPlayerName()
+  // Show and Update cups
+  cups.forEach(cup => {
+    cup.show()
   })
-
-  if (cameraTarget) {
-    camera.position.x = Smooth(
-      camera.position.x,
-      cameraTarget.body.position.x,
-      8
-    )
-    camera.position.y = Smooth(
-      camera.position.y,
-      cameraTarget.body.position.y,
-      8
-    )
-  }
-
-  camera.off()
 
   updateGameStatus()
 

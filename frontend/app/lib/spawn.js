@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-global-assign */
 /* eslint-disable no-unused-vars */
 
@@ -20,6 +21,12 @@
   width
   height
   Smooth
+
+  noOfCups
+  cups
+  Cup
+  random
+  imgCup
 */
 
 // To draw the timer in the right place
@@ -68,4 +75,22 @@ function drawTimer() {
   textSize(timerSize)
   fill(Koji.config.colors.timerText)
   text(timerText, x, y)
+}
+
+function spawnCups() {
+  for (let i = 0; i < noOfCups; i++) {
+    cups.push(
+      new Cup(
+        {
+          x: random(0, width),
+          y: random(0, height),
+        },
+        { radius: 50 },
+        {
+          shape: 'circle',
+          image: imgCup,
+        }
+      )
+    )
+  }
 }
