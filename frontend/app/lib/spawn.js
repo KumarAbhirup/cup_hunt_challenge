@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-plusplus */
 /* eslint-disable no-global-assign */
 /* eslint-disable no-unused-vars */
@@ -28,7 +29,8 @@
   random
   imgCup
   GameObject
-  imgLife
+  imgBall
+  ball
 */
 
 // To draw the timer in the right place
@@ -97,6 +99,7 @@ function spawnCups() {
   }
 
   const randomlyChosenCup = random(cups)
+
   randomlyChosenCup.ball = new GameObject(
     {
       x: randomlyChosenCup.body.position.x,
@@ -105,7 +108,9 @@ function spawnCups() {
     { radius: 20 },
     {
       shape: 'circle',
-      image: imgLife,
+      image: imgBall,
     }
   )
+
+  ball = randomlyChosenCup.ball
 }

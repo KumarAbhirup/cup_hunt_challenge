@@ -595,6 +595,9 @@ function init() {
   enemies = []
   users = []
 
+  cups = []
+  ball = null
+
   dispatch.disconnect()
   dispatch.connect()
 

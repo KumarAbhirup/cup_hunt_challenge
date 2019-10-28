@@ -34,9 +34,12 @@ class Cup extends GameObject {
 
   moveTimer = 2
 
-  showBall() {
+  showAndUpdateBall() {
     if (this.ball) {
       this.ball.show()
+
+      this.ball.body.position.x = this.body.position.x
+      this.ball.body.position.y = this.body.position.y + objSize * 2
     }
   }
 

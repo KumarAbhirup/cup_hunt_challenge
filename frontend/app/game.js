@@ -32,7 +32,7 @@ function gamePlay() {
 
   // Show and Update cups
   cups.forEach(cup => {
-    cup.showBall()
+    cup.showAndUpdateBall()
     cup.show()
     cup.update()
   })
