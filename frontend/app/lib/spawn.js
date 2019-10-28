@@ -100,7 +100,7 @@ function spawnCups() {
   randomlyChosenCup.ball = new GameObject(
     {
       x: randomlyChosenCup.body.position.x,
-      y: randomlyChosenCup.body.position.y + objSize * 1.5,
+      y: randomlyChosenCup.body.position.y + objSize * 2,
     },
     { radius: 20 },
     {

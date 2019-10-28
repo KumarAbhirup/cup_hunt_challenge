@@ -1,6 +1,7 @@
 {
   "images": {
     "cupImage": "https://i.ibb.co/hyx9hHP/starbucks.png",
+    "ballImage": "https://i.imgur.com/39e9e4h.png",
     "soundImage": "https://i.imgur.com/rtFppa8.png",
     "muteImage": "https://i.imgur.com/AR7C733.png",
     "lifeIcon": "https://i.imgur.com/39e9e4h.png",
@@ -30,6 +31,12 @@
         {
           "key": "cupImage",
           "name": "Cup Image",
+          "description": "Ideal size: 100x100",
+          "type": "image"
+        },
+        {
+          "key": "ballImage",
+          "name": "Ball Image",
           "description": "Ideal size: 100x100",
           "type": "image"
         },

@@ -57,6 +57,7 @@ let comboTexts = []
 let noOfCups = 3
 
 // Images
+let imgBall
 let imgCup
 
 let imgLife
@@ -133,6 +134,7 @@ function preload() {
   }
 
   // Load images
+  imgBall = loadImage(Koji.config.images.ballImage)
   imgCup = loadImage(Koji.config.images.cupImage)
   imgLife = loadImage(Koji.config.images.lifeIcon)
   soundImage = loadImage(Koji.config.images.soundImage)
@@ -238,7 +240,7 @@ function setup() {
    */
   if (Koji.config.sounds.backgroundMusic)
     sndMusic = loadSound(Koji.config.sounds.backgroundMusic, () =>
-      playMusic(sndMusic, 0.4, false)
+      playMusic(sndMusic, 0.4, true)
     )
 
   // Dispatch Events and Streamers
