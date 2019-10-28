@@ -34,6 +34,7 @@ function gamePlay() {
   cups.forEach(cup => {
     cup.showBall()
     cup.show()
+    cup.update()
   })
 
   updateGameStatus()

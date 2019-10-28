@@ -85,6 +85,7 @@ let gameTimerEnabled = false
 let gameOverRectangleHeight = 0 // for game over animation
 
 let loadingAnimationTimer = 0
+// let moveTimer = 0 // used for making cups move randomly
 
 let canScore = false
 
